@@ -2,7 +2,6 @@ import requests
 import datetime as dt
 import smtplib
 import os
-
 EMAIL = os.environ["EMAIL_USER"]      # your Gmail
 PASSWORD = os.environ["EMAIL_PASS"]
 
