@@ -62,7 +62,7 @@ def task():
      if night_time():
         if (abs(float(latitude) - MY_LAT ) < 5) and (abs(float(longitude) - MY_LONG) < 5):
             email_night()
-    elif day_time():
+     elif day_time():
         if (abs(float(latitude) - MY_LAT ) < 5) and (abs(float(longitude) - MY_LONG) < 5):
             email_day()
 
