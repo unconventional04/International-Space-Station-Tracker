@@ -1,7 +1,6 @@
 import requests
 import datetime as dt
 import smtplib
-import schedule
 MY_LAT= 38.907192
 MY_LONG= -77.036873
 MY_EMAIL = "oyeludeferanmi@gmail.com"
