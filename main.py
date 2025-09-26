@@ -4,8 +4,8 @@ import smtplib
 import time
 import os
 
-EMAIL = os.environ["EMAIL_USER"]
-PASSWORD = os.environ["EMAIL_PASS"]
+EMAIL = os.environ[EMAIL_USER]
+PASSWORD = os.environ[EMAIL_PASS]
 
 MY_LAT= 38.907192
 MY_LONG= -77.036873
@@ -32,8 +32,8 @@ def email():
     with smtplib.SMTP("smtp.gmail.com") as connection:
         connection.starttls()
         connection.login(user=EMAIL, password= PASSWORD)
-        connection.sendmail(from_addr=MY_EMAIL,
-                            to_addrs= MY_EMAIL,
+        connection.sendmail(from_addr=EMAIL,
+                            to_addrs= EMAIL,
                             msg="Subject: ISS Notification\n\n The ISS is now in your location! Go out and take a look"
                             )
 def task():
