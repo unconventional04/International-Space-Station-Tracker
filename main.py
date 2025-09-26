@@ -1,6 +1,11 @@
 import requests
 import datetime as dt
 import smtplib
+import os
+
+EMAIL = os.environ["EMAIL_USER"]      # your Gmail
+PASSWORD = os.environ["EMAIL_PASS"]
+
 MY_LAT= 38.907192
 MY_LONG= -77.036873
 MY_EMAIL = "oyeludeferanmi@gmail.com"
@@ -44,17 +49,17 @@ def day_time():
 def email_day():
     with smtplib.SMTP("smtp.gmail.com") as connection:
         connection.starttls()
-        connection.login(user="oyeludeferanmi@gmail.com", password="rdpxuhizgczelgrr")
-        connection.sendmail(from_addr=MY_EMAIL,
-                            to_addrs= MY_EMAIL,
+        connection.login(user=EMAIL, password=PASSWORD)
+        connection.sendmail(from_addr=EMAIL,
+                            to_addrs= EMAIL,
                             msg="Subject: ISS Notification\n\n The ISS is now in your location! Go out and take a look"
                             )
 def email_night():
     with smtplib.SMTP("smtp.gmail.com") as connection:
         connection.starttls()
-        connection.login(user="oyeludeferanmi@gmail.com", password="rdpxuhizgczelgrr")
-        connection.sendmail(from_addr=MY_EMAIL,
-                            to_addrs= MY_EMAIL,
+        connection.login(user=EMAIL, password=PASSWORD)
+        connection.sendmail(from_addr=EMAIL,
+                            to_addrs= EMAIL,
                             msg="Subject: ISS Notification\n\n The ISS passed by while you were sleeping! Catch it next time!"
                             )
 
