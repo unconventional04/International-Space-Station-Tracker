@@ -59,11 +59,11 @@ def email_night():
                             )
 
 def task():
-    while night_time():
-        if (0<(float(latitude) - MY_LAT )< 5  or (0<MY_LAT - float(latitude) < 5)) and ((0<float(longitude) - MY_LONG < 5) or (0<MY_LONG- float(longitude) < 5)):
+     if night_time():
+        if (abs(float(latitude) - MY_LAT ) < 5) and (abs(float(longitude) - MY_LONG) < 5):
             email_night()
-    while day_time():
-        if (0<(float(latitude) - MY_LAT )< 5  or (0<MY_LAT - float(latitude) < 5)) and ((0<float(longitude) - MY_LONG < 5) or (0<MY_LONG- float(longitude) < 5)):
+    elif day_time():
+        if (abs(float(latitude) - MY_LAT ) < 5) and (abs(float(longitude) - MY_LONG) < 5):
             email_day()
 
 task()
