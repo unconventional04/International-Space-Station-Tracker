@@ -31,7 +31,7 @@ sunset=response.json()['results']['sunset'].split('T')[1].split("+")[0]
 def email():
     with smtplib.SMTP("smtp.gmail.com") as connection:
         connection.starttls()
-        connection.login(user="oyeludeferanmi@gmail.com", password="rdpxuhizgczelgrr")
+        connection.login(user=EMAIL, password= PASSWORD)
         connection.sendmail(from_addr=MY_EMAIL,
                             to_addrs= MY_EMAIL,
                             msg="Subject: ISS Notification\n\n The ISS is now in your location! Go out and take a look"
