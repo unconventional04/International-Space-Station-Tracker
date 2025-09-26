@@ -37,10 +37,10 @@ The International Space Station is currently passing over your location. Go outs
 
 Tech Stack
 
-Python 3.11
-Requests (API calls)
-smtplib (sending emails)
-GitHub Actions (automation)
+-Python 3.11
+-Requests (API calls)
+-smtplib (sending emails)
+-GitHub Actions (automation)
 
 Why This Project?
 I built this as a fun way to combine space science, automation, and Python. Instead of checking manually, I now get automatic alerts whenever the ISS is overhead
