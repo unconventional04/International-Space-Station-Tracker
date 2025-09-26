@@ -2,7 +2,7 @@ name: Run ISS Tracker
 
 on:
   schedule:
-    - cron: "*/10 * * * *"   # run every 30 minutes
+    - cron: "*/30 * * * *"   # run every 30 minutes
   workflow_dispatch:         # lets you trigger it manually too
 
 jobs:
