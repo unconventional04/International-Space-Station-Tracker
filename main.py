@@ -2,7 +2,7 @@ import requests
 import datetime as dt
 import smtplib
 import os
-EMAIL = os.environ["EMAIL_USER"]      # your Gmail
+EMAIL = os.environ["EMAIL_USER"]   
 PASSWORD = os.environ["EMAIL_PASS"]
 
 MY_LAT= 38.907192
